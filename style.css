@@ -10,3 +10,134 @@ body {
 }
 
 /* Add styles here! */
+:root {
+    --primary-color: hsl(160deg, 100%, 30%);
+  --secondary-color-lighter: hsl(45deg, 100%, 50%);
+  --secondary-color-darker: hsl(45deg, 100%, 40%);
+  --black: hsl(0deg, 0%, 0%);
+  --gray-very-dark: hsl(0deg, 0%, 10%);
+  --gray-dark: hsl(0deg, 0%, 30%);
+  --gray-medium: hsl(0deg, 0%, 40%);
+  --gray-light: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+}
+
+/* common */
+header .max-width-wrapper>.intro-chunk {
+    max-width: 300px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+header .max-width-wrapper {
+    margin-bottom: 64px;
+  margin-top: 64px;
+}
+
+.intro-chunk {
+    margin-left: 24px;
+}
+
+main {
+    margin: 0 auto;
+  height: 100%;
+}
+
+.title {
+    font-size: 1.5em;
+  padding-bottom: 16px;
+  color: var(--black);
+}
+
+main {
+    padding-top: 64px;
+  background-color: var(--gray-light);
+  border-top: 5px solid var(--gray-dark);
+}
+
+p {
+    color: var(--gray-very-dark);
+}
+
+strong {
+    color: var(--primary-color);
+}
+
+.card {
+    background-color: var(--white);
+  border-bottom: 5px solid var(--gray-dark);
+  padding-top: 1px;
+}
+
+.indented-heading {
+    font-size: 1.5em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: -24px;
+  margin-top: 10px;
+  padding: 10px 48px;
+  background-color: var(--secondary-color-lighter);
+  border-bottom: 5px solid var(--secondary-color-darker);
+}
+/* mobile */
+@media (max-width:768px) {
+    section {
+      background-color: var(--white);
+    height:100%;
+  }
+  p {
+      font-size:1.5em;
+  }
+  .title {
+      font-size: 2em;
+  }
+  .card {
+      border-bottom: none;
+    margin: 0px 0px;
+  }
+
+  .card p {
+      display: none;
+  }
+
+  .indented-heading {
+    font-size: 1.5em;
+  margin-left: -24px;
+  margin-right:24px;
+  margin-top: 10px;
+  padding: 10px 48px;
+  background-color: var(--secondary-color-lighter);
+  border-bottom: 5px solid var(--secondary-color-darker);
+  }
+}
+/* tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+    section.max-width-wrapper {
+      max-width: 600px;
+    margin: 0px 0px;
+
+  }
+  .card p {
+      margin: 20px 24px;
+    color: var(--black);
+  }
+}
+
+
+/* desktop */
+@media (min-width: 1024px) {
+    header .max-width-wrapper {
+      max-width: 600px;
+    margin: 0 auto;
+  }
+  section.max-width-wrapper {
+      max-width: 600px;
+    margin: 0 auto;
+
+  }
+  .card p {
+      margin: 20px 24px;
+    color: var(--black);
+  }
+}
+
